@@ -1,9 +1,11 @@
 {
   "/dashboard/page": "app/dashboard/page.js",
-  "/code-editor/page": "app/code-editor/page.js",
-  "/api/analyze-resume/route": "app/api/analyze-resume/route.js",
   "/ai-interview/page": "app/ai-interview/page.js",
   "/technical-assessment/page": "app/technical-assessment/page.js",
+  "/code-editor/page": "app/code-editor/page.js",
   "/roadmap/page": "app/roadmap/page.js",
+  "/api/execute-code/route": "app/api/execute-code/route.js",
+  "/api/submit-code/route": "app/api/submit-code/route.js",
+  "/api/analyze-resume/route": "app/api/analyze-resume/route.js",
   "/verilog-compiler/page": "app/verilog-compiler/page.js"
 }
