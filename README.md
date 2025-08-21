@@ -320,30 +320,18 @@ Landing Page → Sign Up/Sign In → Dashboard → Choose Path:
 <table align="center">
     <tbody>
         <tr>
-            <!-- Sanjay -->
             <td align="center">
                 <a href="https://github.com/Sanjay2521">
                     <img alt="" src="https://avatars.githubusercontent.com/Sanjay2521" width="100px;"><br>
                     <sub><b> Sanjay B M</b></sub>
                 </a>
             </td>
-
-            <!-- Mohasin -->
             <td align="center">
                 <a href="https://github.com/Mohasin-Haque">
                     <img alt="" src="https://avatars.githubusercontent.com/Mohasin-Haque" width="100px;"><br>
                     <sub><b> Mohasin Haque </b></sub>
                 </a>
-                <!-- <br>
-                <a href="https://twitter.com/mohasin_haque">
-                    <img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white">
-                </a>
-                <a href="https://www.linkedin.com/in/mohasin-haque-759786200/">
-                    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white">
-                </a> -->
             </td>
-
-            <!-- Aparna -->
             <td align="center">
                 <a href="https://github.com/Aparnacodes">
                     <img alt="" src="https://avatars.githubusercontent.com/Aparnacodes" width="100px;"><br>
