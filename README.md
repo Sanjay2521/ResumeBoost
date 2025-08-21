@@ -286,4 +286,73 @@ A comprehensive full-stack application that transforms job seekers into intervie
 
 ---
 
+## Workflow
+
+Landing Page → Sign Up/Sign In → Dashboard → Choose Path:
+├── Resume Analysis → ATS Scoring → Recommendations
+├── AI Interview → Personalized Questions → Performance Feedback
+├── Technical Assessment → 20 Coding Questions → Skill Analysis
+├── Learning Roadmaps → 9 Tracks → 3000+ Problems
+├── Embedded Systems → 6 Skills → Hardware Focus
+├── VLSI Design → 6 Skills → Verilog/RTL
+└── Development Tools → Code Editor + Verilog Compiler
+
 **ResumeBoost** - Transforming careers through intelligent preparation 🚀
+<!-- 
+<h1 align=center> Project Admin ❤️ </h1>
+<p align="center">
+
+<table align="center">
+    <tbody>
+        <tr>
+            <td align="center"><a href="https://github.com/Mohasin-Haque"><img alt="" src="https://avatars.githubusercontent.com/Mohasin-Haque" width="100px;"><br><sub><b> Mohasin Haque </b></sub></a></td>
+            <td align="right">
+                <p><a href="https://twitter.com/mohasin_haque"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white"></a></p>
+                <p><a href="https://www.linkedin.com/in/mohasin-haque-759786200/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"></a></p>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+<h1 align=center> Project Admin ❤️ </h1>
+<p align="center">
+
+<table align="center">
+    <tbody>
+        <tr>
+            <!-- Sanjay -->
+            <td align="center">
+                <a href="https://github.com/Sanjay2521">
+                    <img alt="" src="https://avatars.githubusercontent.com/Sanjay2521" width="100px;"><br>
+                    <sub><b> Sanjay B M</b></sub>
+                </a>
+            </td>
+
+            <!-- Mohasin -->
+            <td align="center">
+                <a href="https://github.com/Mohasin-Haque">
+                    <img alt="" src="https://avatars.githubusercontent.com/Mohasin-Haque" width="100px;"><br>
+                    <sub><b> Mohasin Haque </b></sub>
+                </a>
+                <!-- <br>
+                <a href="https://twitter.com/mohasin_haque">
+                    <img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white">
+                </a>
+                <a href="https://www.linkedin.com/in/mohasin-haque-759786200/">
+                    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white">
+                </a> -->
+            </td>
+
+            <!-- Aparna -->
+            <td align="center">
+                <a href="https://github.com/Aparnacodes">
+                    <img alt="" src="https://avatars.githubusercontent.com/Aparnacodes" width="100px;"><br>
+                    <sub><b> Aparna Kumari</b></sub>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+### Show some love by starring this repository. Also follow us.
