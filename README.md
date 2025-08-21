@@ -288,14 +288,17 @@ A comprehensive full-stack application that transforms job seekers into intervie
 
 ## Workflow
 
-Landing Page → Sign Up/Sign In → Dashboard → Choose Path:
-├── Resume Analysis → ATS Scoring → Recommendations
-├── AI Interview → Personalized Questions → Performance Feedback
-├── Technical Assessment → 20 Coding Questions → Skill Analysis
-├── Learning Roadmaps → 9 Tracks → 3000+ Problems
-├── Embedded Systems → 6 Skills → Hardware Focus
-├── VLSI Design → 6 Skills → Verilog/RTL
-└── Development Tools → Code Editor + Verilog Compiler
+## 🚀 Workflow
+
+- 🏠 Landing Page → 🔑 Sign Up / Sign In → 📊 Dashboard → Choose Path:
+  - 📄 **Resume Analysis** → ATS Scoring → Recommendations
+  - 🎤 **AI Interview** → Personalized Questions → Performance Feedback
+  - 💻 **Technical Assessment** → 20 Coding Questions → Skill Analysis
+  - 📚 **Learning Roadmaps** → 9 Tracks → 3000+ Problems
+  - ⚡ **Embedded Systems** → 6 Skills → Hardware Focus
+  - 🔧 **VLSI Design** → 6 Skills → Verilog/RTL
+  - 🛠️ **Development Tools** → Code Editor + Verilog Compiler
+
 
 **ResumeBoost** - Transforming careers through intelligent preparation 🚀
 <!-- 
