@@ -286,8 +286,6 @@ A comprehensive full-stack application that transforms job seekers into intervie
 
 ---
 
-## Workflow
-
 ## 🚀 Workflow
 
 - 🏠 Landing Page → 🔑 Sign Up / Sign In → 📊 Dashboard → Choose Path:
