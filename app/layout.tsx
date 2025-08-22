@@ -3,8 +3,8 @@ import Providers from '../components/Providers'
 import './globals.css'
 
 export const metadata = {
-  title: 'Clerk + Convex App',
-  description: 'Full-stack app with authentication and database',
+  title: 'Resume Boost',
+  description: 'AI-powered career acceleration platform with resume analysis, personalized interviews, technical assessments, and 3000+ coding problems across 9 specialized tracks.',
 }
 
 export default function RootLayout({
