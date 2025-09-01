@@ -3,15 +3,34 @@
 import { useUser, UserButton } from '@clerk/nextjs'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { useQuery } from 'convex/react'
+import { api } from '../../convex/_generated/api'
 
 export default function ResumeFeedback() {
   const { user, isLoaded } = useUser()
   const searchParams = useSearchParams()
   const router = useRouter()
   const [analysisResult, setAnalysisResult] = useState<any>(null)
+  const latestAnalysis = useQuery(api.resumeAnalyses.getLatestResumeAnalysis, 
+    user ? { userId: user.id } : "skip"
+  )
 
   useEffect(() => {
-    // Get analysis result from URL params or localStorage
+    // First try to get from Convex
+    if (latestAnalysis) {
+      setAnalysisResult({
+        score: latestAnalysis.score,
+        improvements: latestAnalysis.improvements,
+        suggestedRoles: latestAnalysis.suggestedRoles.map(role => ({
+          title: role,
+          match: Math.floor(Math.random() * 20) + 80, // Mock match percentage
+          reason: `Good fit based on your skills and experience`
+        }))
+      })
+      return
+    }
+
+    // Fallback to URL params or localStorage
     const scoreParam = searchParams.get('score')
     const improvementsParam = searchParams.get('improvements')
     const rolesParam = searchParams.get('roles')
@@ -27,12 +46,12 @@ export default function ResumeFeedback() {
       const savedResult = localStorage.getItem('resumeAnalysis')
       if (savedResult) {
         setAnalysisResult(JSON.parse(savedResult))
-      } else {
+      } else if (!latestAnalysis && user) {
         // No analysis found, redirect to dashboard
         router.push('/dashboard')
       }
     }
-  }, [searchParams, router])
+  }, [searchParams, router, latestAnalysis, user])
 
   const ScoreCircle = ({ score }: { score: number }) => {
     const circumference = 2 * Math.PI * 45
@@ -70,7 +89,7 @@ export default function ResumeFeedback() {
     )
   }
 
-  if (!isLoaded || !analysisResult) {
+  if (!isLoaded || (!analysisResult && latestAnalysis === undefined)) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-500 border-t-transparent"></div>

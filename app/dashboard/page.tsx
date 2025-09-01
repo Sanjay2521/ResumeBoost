@@ -3,13 +3,17 @@
 import { useUser, UserButton } from '@clerk/nextjs'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { useMutation } from 'convex/react'
+import { useMutation, useQuery } from 'convex/react'
 import { api } from '../../convex/_generated/api'
 
 export default function Dashboard() {
   const { user, isLoaded } = useUser()
   const router = useRouter()
   const createUser = useMutation(api.users.createUser)
+  const createResumeAnalysis = useMutation(api.resumeAnalyses.createResumeAnalysis)
+  const latestAnalysis = useQuery(api.resumeAnalyses.getLatestResumeAnalysis, 
+    user ? { userId: user.id } : "skip"
+  )
 
   useEffect(() => {
     if (user && isLoaded) {
@@ -22,15 +26,7 @@ export default function Dashboard() {
   }, [user, isLoaded, createUser])
   const [resumeFile, setResumeFile] = useState<File | null>(null)
   const [isProcessing, setIsProcessing] = useState(false)
-  const [hasExistingAnalysis, setHasExistingAnalysis] = useState(false)
-
-  useEffect(() => {
-    // Check if user has existing analysis
-    const savedResult = localStorage.getItem('resumeAnalysis')
-    if (savedResult) {
-      setHasExistingAnalysis(true)
-    }
-  }, [])
+  const hasExistingAnalysis = latestAnalysis !== null
 
   const handleResumeUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -53,17 +49,24 @@ export default function Dashboard() {
       })
       const data = await response.json()
       
-      // Save to localStorage and redirect to feedback page
+      // Save to Convex database
+      if (user) {
+        await createResumeAnalysis({
+          userId: user.id,
+          fileName: resumeFile.name,
+          score: data.score,
+          improvements: data.improvements,
+          suggestedRoles: data.suggestedRoles.map((role: any) => 
+            typeof role === 'string' ? role : role.title
+          ),
+        })
+      }
+      
+      // Also save to localStorage as backup
       localStorage.setItem('resumeAnalysis', JSON.stringify(data))
       
-      // Redirect to feedback page with URL params as backup
-      const params = new URLSearchParams({
-        score: data.score.toString(),
-        improvements: encodeURIComponent(JSON.stringify(data.improvements)),
-        roles: encodeURIComponent(JSON.stringify(data.suggestedRoles))
-      })
-      
-      window.location.href = `/resume-feedback?${params.toString()}`
+      // Redirect to feedback page
+      router.push('/resume-feedback')
     } catch (error) {
       console.error('Error:', error)
     }
@@ -149,7 +152,9 @@ export default function Dashboard() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-blue-800">Previous Analysis Available</h3>
-                  <p className="text-blue-600">You have a recent resume analysis ready to view</p>
+                  <p className="text-blue-600">
+                    Score: {latestAnalysis?.score}/100 • {latestAnalysis?.fileName}
+                  </p>
                 </div>
               </div>
               <button
