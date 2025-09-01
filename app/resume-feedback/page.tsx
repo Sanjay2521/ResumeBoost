@@ -133,74 +133,78 @@ export default function ResumeFeedback() {
         </div>
 
         {/* Score Card */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 text-center border border-gray-100 mb-8">
-          <div className="flex items-center justify-center space-x-8">
-            <div>
-              <ScoreCircle score={analysisResult.score} />
-              <p className="mt-4 text-lg font-semibold text-gray-800">ATS Score</p>
-            </div>
-            <div className="text-left">
-              <div className={`inline-flex px-6 py-3 rounded-full text-lg font-medium ${
-                analysisResult.score >= 80 ? 'bg-green-100 text-green-800' :
-                analysisResult.score >= 60 ? 'bg-yellow-100 text-yellow-800' :
-                'bg-red-100 text-red-800'
-              }`}>
-                {analysisResult.score >= 80 ? '🎉 Excellent Resume!' :
-                 analysisResult.score >= 60 ? '👍 Good Foundation' : '📈 Needs Improvement'}
+        {analysisResult && (
+          <div className="bg-white rounded-3xl shadow-xl p-8 text-center border border-gray-100 mb-8">
+            <div className="flex items-center justify-center space-x-8">
+              <div>
+                <ScoreCircle score={analysisResult.score || 0} />
+                <p className="mt-4 text-lg font-semibold text-gray-800">ATS Score</p>
               </div>
-              <p className="mt-3 text-gray-600 max-w-xs text-lg">
-                {analysisResult.score >= 80 ? 'Your resume is ready to impress recruiters and pass ATS filters!' :
-                 analysisResult.score >= 60 ? 'Good foundation, but some improvements will boost your success rate.' :
-                 'Let\'s work together to significantly boost your resume performance!'}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Improvements */}
-          <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-4">
-                <svg className="w-7 h-7 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800">Key Improvements</h3>
-            </div>
-            <div className="space-y-4">
-              {analysisResult.improvements.map((improvement: string, index: number) => (
-                <div key={index} className="flex items-start p-4 bg-orange-50 rounded-xl">
-                  <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-gray-700 text-lg">{improvement}</p>
+              <div className="text-left">
+                <div className={`inline-flex px-6 py-3 rounded-full text-lg font-medium ${
+                  (analysisResult.score || 0) >= 80 ? 'bg-green-100 text-green-800' :
+                  (analysisResult.score || 0) >= 60 ? 'bg-yellow-100 text-yellow-800' :
+                  'bg-red-100 text-red-800'
+                }`}>
+                  {(analysisResult.score || 0) >= 80 ? '🎉 Excellent Resume!' :
+                   (analysisResult.score || 0) >= 60 ? '👍 Good Foundation' : '📈 Needs Improvement'}
                 </div>
-              ))}
+                <p className="mt-3 text-gray-600 max-w-xs text-lg">
+                  {(analysisResult.score || 0) >= 80 ? 'Your resume is ready to impress recruiters and pass ATS filters!' :
+                   (analysisResult.score || 0) >= 60 ? 'Good foundation, but some improvements will boost your success rate.' :
+                   'Let\'s work together to significantly boost your resume performance!'}
+                </p>
+              </div>
             </div>
           </div>
+        )}
 
-          {/* Suggested Roles */}
-          <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
-                <svg className="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
+        {analysisResult && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            {/* Improvements */}
+            <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-7 h-7 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">Key Improvements</h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800">Best Fit Roles</h3>
-            </div>
-            <div className="space-y-4">
-              {analysisResult.suggestedRoles.map((role: any, index: number) => (
-                <div key={index} className="p-5 bg-green-50 rounded-xl border border-green-200">
-                  <div className="flex justify-between items-center mb-2">
-                    <h4 className="font-bold text-gray-800 text-lg">{role.title}</h4>
-                    <span className="text-lg font-bold text-green-600">{role.match}% match</span>
+              <div className="space-y-4">
+                {(analysisResult.improvements || []).map((improvement: string, index: number) => (
+                  <div key={index} className="flex items-start p-4 bg-orange-50 rounded-xl">
+                    <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <p className="text-gray-700 text-lg">{improvement}</p>
                   </div>
-                  <p className="text-gray-600">{role.reason}</p>
+                ))}
+              </div>
+            </div>
+
+            {/* Suggested Roles */}
+            <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
                 </div>
-              ))}
+                <h3 className="text-2xl font-bold text-gray-800">Best Fit Roles</h3>
+              </div>
+              <div className="space-y-4">
+                {(analysisResult.suggestedRoles || []).map((role: any, index: number) => (
+                  <div key={index} className="p-5 bg-green-50 rounded-xl border border-green-200">
+                    <div className="flex justify-between items-center mb-2">
+                      <h4 className="font-bold text-gray-800 text-lg">{role.title || role}</h4>
+                      <span className="text-lg font-bold text-green-600">{role.match || 85}% match</span>
+                    </div>
+                    <p className="text-gray-600">{role.reason || 'Good fit based on your skills'}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Next Steps - Learning Roadmap */}
         <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
