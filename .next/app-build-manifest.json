@@ -1,50 +1,169 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/app/_not-found/page-b62e413d581a750e.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/css/3eae481e120df21b.css",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/595-97c8fb789e7cf77a.js",
+      "static/chunks/app/layout-b4a2a851fc299dc8.js"
     ],
-    "/sign-in/[[...sign-in]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/sign-in/[[...sign-in]]/page.js"
+    "/ai-interview/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/ai-interview/page-01e469c4f7158a93.js"
     ],
     "/dashboard/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/page.js"
-    ],
-    "/codemaster-pro/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/codemaster-pro/page.js"
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/595-97c8fb789e7cf77a.js",
+      "static/chunks/321-1e34c55b0d011b44.js",
+      "static/chunks/app/dashboard/page-5a1e2085becfeb3c.js"
     ],
     "/code-editor/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/code-editor/page.js"
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/code-editor/page-2fbdc976abdfc02d.js"
     ],
-    "/technical-assessment/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/technical-assessment/page.js"
+    "/codemaster-pro/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/595-97c8fb789e7cf77a.js",
+      "static/chunks/321-1e34c55b0d011b44.js",
+      "static/chunks/app/codemaster-pro/page-3ac80a54265ca8ab.js"
     ],
-    "/roadmap/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/roadmap/page.js"
+    "/embedded-roadmap/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/embedded-roadmap/page-de4d1813b2dc030c.js"
+    ],
+    "/recruiter/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/recruiter/page-825c0e51e3986ce3.js"
+    ],
+    "/practice/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/practice/page-264e14170dcb9a52.js"
+    ],
+    "/interview/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/interview/page-a01ec2b4c3849849.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/972-3d92452c51cc8e05.js",
+      "static/chunks/app/page-90ff3acdba14e9e8.js"
     ],
     "/resume-feedback/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/resume-feedback/page.js"
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/resume-feedback/page-7233bf0a37d65b6f.js"
+    ],
+    "/sign-up/[[...sign-up]]/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/sign-up/[[...sign-up]]/page-fc2448f9ee995c0e.js"
+    ],
+    "/sign-in/[[...sign-in]]/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/sign-in/[[...sign-in]]/page-1a828ba2c023dbbc.js"
+    ],
+    "/sign-in/verify-email-address/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/sign-in/verify-email-address/page-db4a339490e5f576.js"
+    ],
+    "/sign-up/verify-email-address/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/sign-up/verify-email-address/page-95958d0f925a5195.js"
+    ],
+    "/technical-assessment/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/technical-assessment/page-c72c495965e5bca3.js"
+    ],
+    "/roadmap/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/roadmap/page-ec32418eb7dd058e.js"
+    ],
+    "/verilog-compiler/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/verilog-compiler/page-14453469e573192c.js"
+    ],
+    "/vlsi-roadmap/page": [
+      "static/chunks/webpack-03f7c6bc932ce1e3.js",
+      "static/chunks/fd9d1056-4eb6fa8bfc0be32c.js",
+      "static/chunks/117-831a729782b67334.js",
+      "static/chunks/main-app-2dd6387cdd9267be.js",
+      "static/chunks/588-4fb9579df0f56b69.js",
+      "static/chunks/app/vlsi-roadmap/page-650e5c3fa309bc46.js"
     ]
   }
 }

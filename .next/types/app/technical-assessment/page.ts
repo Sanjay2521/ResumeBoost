@@ -1,4 +1,4 @@
-// File: C:\Users\sanjay.b.m\code_thon_2\app\technical-assessment\page.tsx
+// File: c:\Users\sanjay.b.m\code_thon_2\app\technical-assessment\page.tsx
 import * as entry from '../../../../app/technical-assessment/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
