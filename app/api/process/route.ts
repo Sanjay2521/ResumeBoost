@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import OpenAI from 'openai'
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-})
+// Optional OpenAI integration
+let openai: any = null
+try {
+  if (process.env.OPENAI_API_KEY) {
+    const OpenAI = require('openai')
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+  }
+} catch (error) {
+  console.log('OpenAI not available, using mock responses')
+}
 
 export async function POST(request: NextRequest) {
   try {
