@@ -326,19 +326,33 @@ export default function TechnicalAssessment() {
             </div>
           </div>
 
-          <div className="text-center mt-8 space-y-4">
-            <button
-              onClick={() => window.location.href = '/roadmap'}
-              className="bg-gradient-to-r from-green-500 to-teal-600 text-white py-3 px-8 rounded-2xl font-semibold hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg mr-4"
-            >
-              🗺️ View Learning Roadmap
-            </button>
-            <button
-              onClick={() => window.location.href = '/dashboard'}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-8 rounded-2xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Back to Dashboard
-            </button>
+          <div className="text-center mt-8">
+            <div className="flex justify-center space-x-4 flex-wrap gap-4">
+              <button
+                onClick={() => window.location.href = '/resume-feedback'}
+                className="bg-gradient-to-r from-green-500 to-teal-600 text-white py-3 px-8 rounded-2xl font-semibold hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                📄 View Resume Analysis
+              </button>
+              <button
+                onClick={() => window.location.href = '/roadmap'}
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 px-8 rounded-2xl font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                📚 Learning Roadmap
+              </button>
+              <button
+                onClick={() => window.location.href = '/ai-interview'}
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 px-8 rounded-2xl font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                🎤 Retake Interview
+              </button>
+              <button
+                onClick={() => window.location.href = '/dashboard'}
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-8 rounded-2xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                🏠 Upload New Resume
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -350,9 +364,17 @@ export default function TechnicalAssessment() {
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Technical Assessment
-          </h1>
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={() => window.history.back()}
+              className="flex items-center text-gray-600 hover:text-gray-800 transition-colors bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg"
+            >
+              ← Back
+            </button>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Technical Assessment
+            </h1>
+          </div>
           <div className="flex items-center space-x-4">
             <div className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
               ⏰ {formatTime(timeLeft)}

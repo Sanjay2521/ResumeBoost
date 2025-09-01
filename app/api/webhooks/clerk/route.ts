@@ -1,16 +1,18 @@
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
+import { ConvexHttpClient } from 'convex/browser'
+import { api } from '../../../../convex/_generated/api'
 
-// Webhook to handle Clerk user events
+const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!)
+
 export async function POST(req: Request) {
-  const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET
+  const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET
 
   if (!WEBHOOK_SECRET) {
-    throw new Error('Please add WEBHOOK_SECRET from Clerk Dashboard to .env or .env.local')
+    throw new Error('Please add CLERK_WEBHOOK_SECRET from Clerk Dashboard to .env or .env.local')
   }
 
-  // Get the headers
   const headerPayload = headers()
   const svix_id = headerPayload.get("svix-id")
   const svix_timestamp = headerPayload.get("svix-timestamp")
@@ -22,18 +24,15 @@ export async function POST(req: Request) {
     })
   }
 
-  // Get the body
-  const payload = await req.text()
-  const body = JSON.parse(payload)
+  const payload = await req.json()
+  const body = JSON.stringify(payload)
 
-  // Create a new Svix instance with your secret.
   const wh = new Webhook(WEBHOOK_SECRET)
 
   let evt: WebhookEvent
 
-  // Verify the payload with the headers
   try {
-    evt = wh.verify(payload, {
+    evt = wh.verify(body, {
       "svix-id": svix_id,
       "svix-timestamp": svix_timestamp,
       "svix-signature": svix_signature,
@@ -45,9 +44,13 @@ export async function POST(req: Request) {
     })
   }
 
-  // Handle the webhook
-  const eventType = evt.type
-  console.log(`Webhook with an ID of ${body.data.id} and type of ${eventType}`)
+  if (evt.type === 'user.created') {
+    await convex.mutation(api.users.createUser, {
+      userId: evt.data.id,
+      email: evt.data.email_addresses[0]?.email_address || '',
+      name: `${evt.data.first_name || ''} ${evt.data.last_name || ''}`.trim(),
+    })
+  }
 
   return new Response('', { status: 200 })
 }

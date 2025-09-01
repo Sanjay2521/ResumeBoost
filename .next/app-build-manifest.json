@@ -11,25 +11,25 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/sign-up/page": [
+    "/sign-in/[[...sign-in]]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/sign-up/page.js"
-    ],
-    "/sign-up/verify-email-address/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/sign-up/verify-email-address/page.js"
+      "static/chunks/app/sign-in/[[...sign-in]]/page.js"
     ],
     "/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/page.js"
     ],
-    "/ai-interview/page": [
+    "/codemaster-pro/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/ai-interview/page.js"
+      "static/chunks/app/codemaster-pro/page.js"
+    ],
+    "/code-editor/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/code-editor/page.js"
     ],
     "/technical-assessment/page": [
       "static/chunks/webpack.js",
@@ -41,30 +41,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/roadmap/page.js"
     ],
-    "/code-editor/page": [
+    "/resume-feedback/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/code-editor/page.js"
-    ],
-    "/verilog-compiler/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/verilog-compiler/page.js"
-    ],
-    "/interview/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/interview/page.js"
-    ],
-    "/recruiter/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/recruiter/page.js"
-    ],
-    "/vlsi-roadmap/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/vlsi-roadmap/page.js"
+      "static/chunks/app/resume-feedback/page.js"
     ]
   }
 }

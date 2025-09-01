@@ -1,8 +1,9 @@
 {
+  "/codemaster-pro/page": "app/codemaster-pro/page.js",
   "/dashboard/page": "app/dashboard/page.js",
+  "/resume-feedback/page": "app/resume-feedback/page.js",
+  "/roadmap/page": "app/roadmap/page.js",
   "/code-editor/page": "app/code-editor/page.js",
-  "/verilog-compiler/page": "app/verilog-compiler/page.js",
-  "/recruiter/page": "app/recruiter/page.js",
-  "/interview/page": "app/interview/page.js",
-  "/vlsi-roadmap/page": "app/vlsi-roadmap/page.js"
+  "/api/submit-code/route": "app/api/submit-code/route.js",
+  "/api/execute-code/route": "app/api/execute-code/route.js"
 }
