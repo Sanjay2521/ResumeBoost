@@ -16,7 +16,7 @@
     "openai": "^4.104.0",
     "react": "^18",
     "react-dom": "^18",
-    "svix": "^1.74.1",
+    "svix": "^1.75.0",
     "typescript": "^5"
   },
   "devDependencies": {

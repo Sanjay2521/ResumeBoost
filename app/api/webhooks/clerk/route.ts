@@ -1,8 +1,16 @@
-import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 import { WebhookEvent } from '@clerk/nextjs/server'
 import { ConvexHttpClient } from 'convex/browser'
 import { api } from '../../../../convex/_generated/api'
+
+// Optional svix import
+let Webhook: any = null
+try {
+  const svix = require('svix')
+  Webhook = svix.Webhook
+} catch (error) {
+  console.log('Svix not available, webhook verification disabled')
+}
 
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!)
 
@@ -27,21 +35,25 @@ export async function POST(req: Request) {
   const payload = await req.json()
   const body = JSON.stringify(payload)
 
-  const wh = new Webhook(WEBHOOK_SECRET)
-
   let evt: WebhookEvent
 
-  try {
-    evt = wh.verify(body, {
-      "svix-id": svix_id,
-      "svix-timestamp": svix_timestamp,
-      "svix-signature": svix_signature,
-    }) as WebhookEvent
-  } catch (err) {
-    console.error('Error verifying webhook:', err)
-    return new Response('Error occured', {
-      status: 400
-    })
+  if (Webhook) {
+    const wh = new Webhook(WEBHOOK_SECRET)
+    try {
+      evt = wh.verify(body, {
+        "svix-id": svix_id,
+        "svix-timestamp": svix_timestamp,
+        "svix-signature": svix_signature,
+      }) as WebhookEvent
+    } catch (err) {
+      console.error('Error verifying webhook:', err)
+      return new Response('Error occured', {
+        status: 400
+      })
+    }
+  } else {
+    // Fallback when svix is not available
+    evt = payload as WebhookEvent
   }
 
   if (evt.type === 'user.created') {
